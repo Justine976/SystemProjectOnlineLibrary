@@ -104,33 +104,32 @@ a:hover {
 /* Section Layout */
 section,
 .login-container,
-.reg-container,
 .book-suggestions,
 .profile-banner {
-  background: rgba(0, 0, 0, 0.5);
-  margin: 2rem auto;
-  padding: 2rem;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 1200px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  animation: fadeInUp 1.2s;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeInUp 1.2s;
 }
 .reg-container {
-  background: rgba(0, 0, 0, 0.5);
-  margin: 2rem auto;
-  padding: 2rem;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 1200px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  animation: fadeInUp 1.2s;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeInUp 1.2s;
 }
 /* Responsive Height Centering */
 .center-wrapper {

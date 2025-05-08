@@ -30,7 +30,7 @@
                     <p class="error">${error}</p>
                     <button type="submit">Login</button>
                 </form>
-                <p>Don`t have an Account? <a href="registration.jsp">Register</a></p>
+                <p>Don`t have an account? <a href="registration.jsp">Register</a></p>
             </div>
         </div>
         <footer>

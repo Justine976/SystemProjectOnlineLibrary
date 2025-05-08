@@ -40,9 +40,9 @@
                     <img src="images/user-profile.jpg" alt="Profile Picture">
                 </div>
 
-                <h2>${firstName} ${lastName}</h2>
-                <p><strong>ID Number:</strong>${id_number}</p>
-                <p><strong>Email:</strong>${email}</p>
+                <h2>${firstName} ${lastName}</h2><br>
+                <p><strong>ID Number:</strong>${id_number}</p><br>
+                <p><strong>Email:</strong>${email}</p><br>
                 <button onclick="location.href = 'logout.jsp'">Logout</button>
                 <a href="deleteAccount.jsp" class="danger">Delete Account</a>
             </section>
