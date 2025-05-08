@@ -46,11 +46,20 @@ nav {
     gap: 1rem;
     animation: fadeIn 1.2s;
 }
+header a,
 nav a {
     color: white;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
+}
+p a {
+    color: deepskyblue;
+    text-decoration: none;
+}
+.danger {
+    color: red;
+    text-decoration: none;
 }
 a:hover {
     color: #ffcc00;

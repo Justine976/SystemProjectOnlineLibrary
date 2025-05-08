@@ -22,7 +22,7 @@
                     <label for="show-password">Show Password</label><br>
                     <p class="message">${message}</p>
                     <p class="error">${error}</p>
-                    <button type="submit">Delete Account</button>
+                    <button type="submit" >Delete Account</button>
                 </form>
             </div>
         </div>

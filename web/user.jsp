@@ -44,7 +44,7 @@
                 <p><strong>ID Number:</strong>${id_number}</p>
                 <p><strong>Email:</strong>${email}</p>
                 <button onclick="location.href = 'logout.jsp'">Logout</button>
-                <a href="deleteAccount.jsp">Delete Account</a>
+                <a href="deleteAccount.jsp" class="danger">Delete Account</a>
             </section>
         </div>
         <footer>
