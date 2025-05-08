@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+html, body {
+    height: 100%;
+    color: white;
+    overflow-x: hidden;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/close-up-opened-book-library.jpg') no-repeat center center/cover;
+    z-index: -1;
+}
+header {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: fadeInDown 1.2s;
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+}
+nav {
+    display: flex;
+    gap: 1rem;
+    animation: fadeIn 1.2s;
+}
+a:hover {
+    color: #ffcc00;
+    transition: color 0.3s;
+}
+/* Hamburger for mobile */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.menu-toggle span {
+    background: white;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+}
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+    }
+    nav.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+}
+.error{
+    color: red;
+}
+.message{
+    color: lime;
+}
+.center-wrapper {
+    min-height: calc(100vh - 150px); /* header + footer space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.7rem;
+    margin: 0.5rem auto;
+    border: none;
+    border-radius: 5px;
+}
+button {
+    padding: 0.7rem 1.5rem;
+    background: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 0.5rem auto;
+    cursor: pointer;
+    animation: fadeInUp 1.2s;
+}
+button:hover {
+    background: #e6b800;
+}
+#show-password {
+    margin: 0.5rem auto;
+}
+.book-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.book-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.book-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+.book-card:hover {
+    transform: scale(1.05);
+}
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+}
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+footer {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    z-index: 1000;
+    animation: fadeIn 1.2s;
+}
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
