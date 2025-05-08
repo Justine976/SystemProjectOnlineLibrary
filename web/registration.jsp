@@ -38,7 +38,7 @@
                     <p class="message">${message}</p>
                     <p class="error">${error}</p>
                 </form>
-                <p>Have an Account? <a href="Login.jsp">Login</a></p>
+                <p>Have an Account? <a href="login.jsp">Login</a></p>
             </div>
         <footer>
             &copy; 2025 Online Library. All rights reserved.
