@@ -46,6 +46,12 @@ nav {
     gap: 1rem;
     animation: fadeIn 1.2s;
 }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
 a:hover {
     color: #ffcc00;
     transition: color 0.3s;
@@ -86,6 +92,38 @@ a:hover {
 .message{
     color: lime;
 }
+/* Section Layout */
+section,
+.login-container,
+.reg-container,
+.book-suggestions,
+.profile-banner {
+  background: rgba(0, 0, 0, 0.5);
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeInUp 1.2s;
+}
+.reg-container {
+  background: rgba(0, 0, 0, 0.5);
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeInUp 1.2s;
+}
+/* Responsive Height Centering */
 .center-wrapper {
     min-height: calc(100vh - 150px); /* header + footer space */
     display: flex;
