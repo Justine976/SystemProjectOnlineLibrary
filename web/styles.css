@@ -54,10 +54,13 @@ nav a {
     transition: color 0.3s;
 }
 p a {
-    color: deepskyblue;
+    color: #ffcc00;
     text-decoration: none;
 }
-.danger {
+p a:hover {
+    color: #e6b800;
+}
+.delete {
     color: red;
     text-decoration: none;
 }
