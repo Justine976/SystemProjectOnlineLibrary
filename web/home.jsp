@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.sql.*" %>
 <%
     String user = (String) session.getAttribute("user");
     if (user == null) {
@@ -35,51 +36,25 @@
             <h1>Welcome to the Online Library</h1>
             <p>Explore a world of knowledge and imagination. Discover books, read online, and manage your library from anywhere.</p>
         </section>
-        <section class="book-suggestions">
-            <h2>Popular Book Suggestions</h2>
+        <section>
+            <h2>Books</h2>
             <div class="book-cards">
+                <%
+                    Class.forName("com.mysql.cj.jdbc.Driver");
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/registeredData", "root", "12345");
+                    Statement stmt = conn.createStatement();
+                    ResultSet rs = stmt.executeQuery("SELECT * FROM books");
+
+                    while (rs.next()) {
+                %>
                 <div class="book-card">
-                    <img src="images/book.avif" alt="Book 1">
-                    <div class="book-info">
-                        <h3>Book Title 1</h3>
-                        <p>Author: John Doe</p>
-                    </div>
+                    <img src="<%= rs.getString("image_path")%>" alt="Book Image">
+                    <h3>Title: <%= rs.getString("title")%></h3>
+                    <p>Author: <%= rs.getString("author")%></p>
                 </div>
-                <div class="book-card">
-                    <img src="images/book.avif" alt="Book 2">
-                    <div class="book-info">
-                        <h3>Book Title 2</h3>
-                        <p>Author: Jane Smith</p>
-                    </div>
-                </div>
-                <div class="book-card">
-                    <img src="images/book.avif" alt="Book 3">
-                    <div class="book-info">
-                        <h3>Book Title 3</h3>
-                        <p>Author: Mark Johnson</p>
-                    </div>
-                </div>
-                <div class="book-card">
-                    <img src="images/book.avif" alt="Book 1">
-                    <div class="book-info">
-                        <h3>Book Title 4</h3>
-                        <p>Author: John Doe</p>
-                    </div>
-                </div>
-                <div class="book-card">
-                    <img src="images/book.avif" alt="Book 2">
-                    <div class="book-info">
-                        <h3>Book Title 5</h3>
-                        <p>Author: Jane Smith</p>
-                    </div>
-                </div>
-                <div class="book-card">
-                    <img src="images/book.avif" alt="Book 3">
-                    <div class="book-info">
-                        <h3>Book Title 6</h3>
-                        <p>Author: Mark Johnson</p>
-                    </div>
-                </div>
+                <%
+                    }
+                %>
             </div>
         </section>
         <footer>

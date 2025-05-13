@@ -31,7 +31,7 @@
             </nav>
         </header>
         <div class="center-wrapper">
-            <section class="about-section">
+            <section>
                 <h1>About Our Online Library</h1>
                 <p>Welcome to our Online Library!<br>
                     Our mission is to provide easy access to a wide variety of books and resources to support learning, creativity, and personal growth.

@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     String user = (String) session.getAttribute("user");
+    Boolean Admin = (Boolean) session.getAttribute("Admin");
     if (user == null) {
         response.sendRedirect("index.html");
         return;
@@ -37,9 +38,12 @@
         <div class="center-wrapper">
             <section class="profile-banner">
                 <h2>${firstName} ${lastName}</h2><br>
-                <p><strong>ID Number:</strong>${id_number}</p><br>
-                <p><strong>Email:</strong>${email}</p><br>
+                <p><strong>ID Number: </strong>${id_number}</p><br>
+                <p><strong>Email: </strong>${email}</p><br>
                 <button onclick="location.href = 'logout.jsp'">Logout</button>
+                <% if (Admin != null && Admin) { %>
+                <button onclick="location.href = 'manageBooks.jsp'">Manage Books</button>
+                <% }%>
                 <a href="deleteAccount.jsp" class="delete">Delete Account</a>
             </section>
         </div>

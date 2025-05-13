@@ -23,26 +23,16 @@
             <div class="reg-container">
                 <form action="RegistrationServlet" method="post">
                     <h2>Registration</h2><br><br>
-                    <div>
                     <label for="first_name">First Name</label><br>
                     <input type="text" name="first_name" required><br><br>
-                    </div>
-                    <div>
                     <label for="last_name">Last Name</label><br>
                     <input type="text" name="last_name" required><br><br>
-                    </div>
-                    <div>
                     <label for="id_number">ID Number</label><br>
                     <input type="text" name="id_number" required><br><br>
-                    </div>
-                    <div>
                     <label for="email">Email</label><br>
                     <input type="email" name="email" required><br><br>
-                    </div>
-                    <div>
                     <label for="password">Password</label><br>
                     <input type="password" name="password" id="password" required><br>
-                    </div>
                     <input id="show-password" type="checkbox" onclick="togglePassword()"> 
                     <label for="show-password">Show Password</label><br>
                     <button type="submit">Register</button>
