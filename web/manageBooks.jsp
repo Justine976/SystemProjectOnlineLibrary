@@ -48,7 +48,9 @@
                     <th>Description</th>
                     <th>Actions</th>
                 </tr>
-                <% while (rs.next()) {%>
+                <%
+                    while (rs.next()) {
+                %>
                 <tr>
                     <td><img src="<%= rs.getString("image_path")%>" width="100"></td>
                     <td><%= rs.getString("title")%></td>
@@ -65,7 +67,9 @@
                         </form>
                     </td>
                 </tr>
-                <% }%>
+                <%
+                    }
+                %>
             </table>
 
         </section>
