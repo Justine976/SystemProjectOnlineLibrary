@@ -1,8 +1,8 @@
 
-import java.io.IOException;
+import java.io.*;
 import java.sql.*;
 import jakarta.servlet.*;
-import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.annotation.*;
 import jakarta.servlet.http.*;
 
 @WebServlet("/deleteBook")

@@ -7,18 +7,15 @@
         return;
     }
 %>
-
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>User Profile</title>
+        <title>User Profile - Online Library</title>
         <link href="images/library-logo.png" rel="icon">
         <link rel="stylesheet" href="styles.css">
     </head>
-
     <body>
         <header>
             <a class="logo" href="home.jsp">
@@ -36,7 +33,10 @@
             </nav>
         </header>
         <div class="center-wrapper">
-            <section class="profile-banner">
+            <section>
+                <% if (Admin != null && Admin) { %>
+                <h3>{ADMIN}</h3>
+                <% }%>
                 <h2>${firstName} ${lastName}</h2><br>
                 <p><strong>ID Number: </strong>${id_number}</p><br>
                 <p><strong>Email: </strong>${email}</p><br>
@@ -50,12 +50,10 @@
         <footer>
             &copy; 2025 Online Library. All rights reserved.
         </footer>
-
         <script>
             function toggleMenu() {
                 document.getElementById('nav').classList.toggle('active');
             }
         </script>
     </body>
-
 </html>

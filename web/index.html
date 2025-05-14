@@ -2,33 +2,31 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Landing - Online Library</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing Page - Online Library</title>
         <link href="images/library-logo.png" rel="icon">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <header>
             <a class="logo" href="home.jsp">
-                <img src="images/library-logo.png" alt="LOAD ERROR">
+                <img src="images/library-logo.png" alt="Online Library Logo" aria-label="Library Logo">
                 Online Library
             </a>
-            <a href="registration.jsp">Register</a>
+            <nav>
+                <a href="registration.jsp">Register</a>
+            </nav>
         </header>
         <div class="center-wrapper">
             <section>
                 <h1>Welcome to the Online Library</h1>
                 <p>Explore a world of knowledge. Discover books online.</p>
-                <button onclick="location.href = 'login.jsp'">Login</button>
-                <p>Don`t have an Account? <a href="registration.jsp">Register</a></p>
+                <button type="button" onclick="location.href = 'login.jsp'">Login</button>
+                <p>Don't have an account? <a href="registration.jsp">Register</a></p>
             </section>
         </div>
         <footer>
             &copy; 2025 Online Library. All rights reserved.
         </footer>
-        <script>
-            function toggleMenu() {
-                document.getElementById('nav').classList.toggle('active');
-            }
-        </script>
     </body>
 </html>

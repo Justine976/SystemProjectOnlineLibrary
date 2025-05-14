@@ -32,7 +32,7 @@ header {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    animation: fadeInDown 1.2s;
+    animation: fadeInDown 1s;
     display: flex;
     align-items: center;
 }
@@ -44,7 +44,7 @@ header {
 nav {
     display: flex;
     gap: 1rem;
-    animation: fadeIn 1.2s;
+    animation: fadeIn 0.5s;
 }
 header a,
 nav a {
@@ -98,29 +98,20 @@ a:hover {
     .menu-toggle {
         display: flex;
     }
+    th {
+        display: none;
+    }
+    td {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
 }
 .error{
     color: red;
 }
 .message{
     color: lime;
-}
-.login-container,
-.reg-container,
-.book-suggestions,
-.profile-banner {
-    background: rgba(0, 0, 0, 0.5);
-    margin: 2rem auto;
-    padding: 2rem;
-    border-radius: 10px;
-    height: 90%;
-    width: 90%;
-    max-width: 1200px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    animation: fadeInUp 1.2s;
 }
 section {
     background: rgba(0, 0, 0, 0.5);
@@ -133,14 +124,21 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    animation: fadeInUp 1.2s;
+    animation: fadeInUp 1s;
+}
+section img {
+    margin: auto;
 }
 .center-wrapper {
     height: 90%;
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
     padding: 1rem;
+}
+textarea {
+    height: 200px;
 }
 textarea,
 input[type="text"],
@@ -154,6 +152,10 @@ input[type="file"] {
     border: none;
     border-radius: 5px;
 }
+input[type="file"] {
+    color: black;
+    background: ghostwhite;
+}
 button {
     padding: 0.7rem 1.5rem;
     background: #ffcc00;
@@ -163,7 +165,7 @@ button {
     font-weight: bold;
     margin: 0.5rem auto;
     cursor: pointer;
-    animation: fadeInUp 1.2s;
+    animation: fadeInUp 0.5s;
 }
 button:hover {
     background: #e6b800;

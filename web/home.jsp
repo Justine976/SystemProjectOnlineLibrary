@@ -6,6 +6,16 @@
         response.sendRedirect("index.html");
         return;
     }
+
+    Connection conn = null;
+    Statement stmt = null;
+    ResultSet rs = null;
+
+    try {
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/registeredData", "root", "12345");
+        stmt = conn.createStatement();
+        rs = stmt.executeQuery("SELECT * FROM books");
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +29,7 @@
     <body>
         <header>
             <a class="logo" href="home.jsp">
-                <img src="images/library-logo.png" alt="LOAD ERROR">
+                <img src="images/library-logo.png" alt="Online Library Logo">
                 Online Library
             </a>
             <div class="menu-toggle" onclick="toggleMenu()">
@@ -29,28 +39,23 @@
             </div>
             <nav id="nav">
                 <a href="about.jsp">About</a>
-                <a href="user.jsp"><%= user%></a>
+                <a href="user.jsp"><%= user %></a>
             </nav>
         </header>
         <section>
             <h1>Welcome to the Online Library</h1>
-            <p>Explore a world of knowledge and imagination. Discover books, read online, and manage your library from anywhere.</p>
+            <p>Explore a world of knowledge and imagination. Discover books and manage your library from anywhere.</p>
         </section>
         <section>
             <h2>Books</h2>
             <div class="book-cards">
                 <%
-                    Class.forName("com.mysql.cj.jdbc.Driver");
-                    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/registeredData", "root", "12345");
-                    Statement stmt = conn.createStatement();
-                    ResultSet rs = stmt.executeQuery("SELECT * FROM books");
-
                     while (rs.next()) {
                 %>
-                <div class="book-card">
-                    <img src="<%= rs.getString("image_path")%>" alt="Book Image">
-                    <h3>Title: <%= rs.getString("title")%></h3>
-                    <p>Author: <%= rs.getString("author")%></p>
+                <div class="book-card" onclick="location.href='bookDetails.jsp?id=<%= rs.getInt("id") %>'">
+                    <img src="<%= rs.getString("image_path") %>" alt="Cover of <%= rs.getString("title") %>">
+                    <h3>Title: <%= rs.getString("title") %></h3>
+                    <p>Author: <%= rs.getString("author") %></p>
                 </div>
                 <%
                     }
@@ -67,3 +72,12 @@
         </script>
     </body>
 </html>
+<%
+    } catch (Exception e) {
+        out.println("<p>Error loading books: " + e.getMessage() + "</p>");
+    } finally {
+        if (rs != null) try { rs.close(); } catch (Exception ignore) {}
+        if (stmt != null) try { stmt.close(); } catch (Exception ignore) {}
+        if (conn != null) try { conn.close(); } catch (Exception ignore) {}
+    }
+%>
