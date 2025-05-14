@@ -17,7 +17,7 @@
     </head>
     <body>
         <header>
-            <a href="index.html" aria-label="Back to Landing Page">Back</a>
+            <a href="index.html" aria-label="Back to Landing Page">BACK</a>
             <a href="login.jsp">Login</a>
         </header>
         <div class="center-wrapper">

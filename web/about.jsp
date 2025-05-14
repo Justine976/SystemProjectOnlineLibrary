@@ -1,11 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%
-    String user = (String) session.getAttribute("user");
-    if (user == null) {
-        response.sendRedirect("index.html");
-        return;
-    }
-%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -27,8 +20,7 @@
                 <span></span>
             </div>
             <nav id="nav">
-                <a href="home.jsp">Home</a>
-                <a href="user.jsp"><%= user%></a>
+                <a href="home.jsp">BACK</a>
             </nav>
         </header>
         <div class="center-wrapper">
@@ -41,7 +33,7 @@
                 <br><br>
                 <h2>Our Features</h2>
                 <p>Access thousands of books across various genres.<br>
-                    Read books online or download them for offline reading.<br>
+                    Read books online.<br>
                     Personalized recommendations based on your reading preferences.<br>
                     Manage your book collection with a user-friendly interface.<br>
                     Join a community of readers and share book reviews.
