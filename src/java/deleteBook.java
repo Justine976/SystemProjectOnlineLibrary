@@ -12,8 +12,8 @@ public class deleteBook extends HttpServlet {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/registeredData", "root", "12345");
-
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/registeredData", "root", "");
+            
             PreparedStatement stmt = conn.prepareStatement("DELETE FROM books WHERE id = ?");
             stmt.setInt(1, id);
 

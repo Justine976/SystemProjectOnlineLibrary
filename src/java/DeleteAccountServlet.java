@@ -19,9 +19,8 @@ public class DeleteAccountServlet extends HttpServlet {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/registeredData", "root", "12345");
-
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/registeredData", "root", "");
+            
             // Check if user exists
             PreparedStatement checkStmt = conn.prepareStatement(
                     "SELECT * FROM users WHERE id_number = ? AND password = ?");

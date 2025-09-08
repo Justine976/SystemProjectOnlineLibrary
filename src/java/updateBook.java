@@ -20,8 +20,8 @@ public class updateBook extends HttpServlet {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/registeredData", "root", "12345");
-
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/registeredData", "root", "");
+            
             String sql;
             if (!fileName.isEmpty()) {
                 // Update including image

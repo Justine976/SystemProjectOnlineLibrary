@@ -7,14 +7,14 @@
         return;
     }
 
-    Connection con = null;
+    Connection conn = null;
     PreparedStatement ps = null;
     ResultSet rs = null;
 
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/registeredData", "root", "12345");
-        ps = con.prepareStatement("SELECT * FROM books WHERE id = ?");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost/registeredData", "root", "");
+        ps = conn.prepareStatement("SELECT * FROM books WHERE id = ?");
         ps.setInt(1, Integer.parseInt(id));
         rs = ps.executeQuery();
 %>
@@ -61,8 +61,8 @@
             ps.close();
         } catch (SQLException ignored) {
         }
-        if (con != null) try {
-            con.close();
+        if (conn != null) try {
+            conn.close();
         } catch (SQLException ignored) {
         }
     }

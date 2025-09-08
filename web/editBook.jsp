@@ -15,7 +15,7 @@
 
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/registeredData", "root", "12345");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost/registeredData", "root", "");
 
         stmt = conn.prepareStatement("SELECT * FROM books WHERE id = ?");
         stmt.setInt(1, id);

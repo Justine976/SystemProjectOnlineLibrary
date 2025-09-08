@@ -32,8 +32,8 @@ public class addBook extends HttpServlet {
         // Save info to database
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/registeredData", "root", "12345");
-
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/registeredData", "root", "");
+            
             String sql = "INSERT INTO books (title, author, description, image_path) VALUES (?, ?, ?, ?)";
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, title);

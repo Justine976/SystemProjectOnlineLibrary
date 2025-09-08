@@ -1,0 +1,26 @@
+CREATE DATABASE IF NOT EXISTS registeredData;
+
+USE registeredData;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  Admin BOOLEAN DEFAULT FALSE,
+  first_name VARCHAR(100),
+  last_name VARCHAR(100),
+  id_number INT UNIQUE,
+  email VARCHAR(150) UNIQUE,
+  password VARCHAR(100) 
+);
+
+CREATE TABLE IF NOT EXISTS books (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) UNIQUE,
+  author VARCHAR(255),
+  description TEXT,
+  image_path VARCHAR(255)
+);
+
+
+
+
+UPDATE users SET Admin = TRUE WHERE id_number = '';
